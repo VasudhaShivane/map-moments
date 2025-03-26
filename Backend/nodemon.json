@@ -1,0 +1,8 @@
+{
+    "env": {
+        "DB_USER" : "shivanevasudha",
+        "DB_PASSWORD" : "photogenic",
+        "DB_NAME" : "mern",
+        "JWT_KEY" : "supersecret_dont_share"
+    }
+}

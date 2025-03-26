@@ -1,0 +1,229 @@
+.place-form-card {
+    margin: 2rem auto;
+    max-width: 45rem;
+    width: 90%;
+  }
+  
+  .place-form {
+    list-style: none;
+    padding: 2rem;
+    width: 100%;
+    background: white;
+  }
+  
+  .place-form h2 {
+    color: #2c2f33;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.75rem;
+  }
+  
+  .form-row {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    margin: 0;
+  }
+  
+  .form-control label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .form-control input,
+  .form-control textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9fb;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .form-control input:focus,
+  .form-control textarea:focus {
+    outline: none;
+    border-color: #ff5f40;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 95, 64, 0.15);
+  }
+  
+  /* Image Upload Styling */
+  .image-upload-container {
+    margin-bottom: 1rem;
+  }
+  
+  .image-upload-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-upload__preview {
+    width: 100%;
+    height: 15rem;
+    border: 3px dashed #ccd0d5;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: #f9f9fb;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .image-upload__preview:hover {
+    border-color: #ff5f40;
+    background: #fff5f2;
+  }
+  
+  .image-upload__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-upload input[type='file'] {
+    display: none;
+  }
+  
+  .image-upload__preview p {
+    color: #777;
+    font-size: 0.95rem;
+  }
+  
+  .image-upload button {
+    background: #f0f2f5;
+    color: #444;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-upload button:hover {
+    background: #e4e6eb;
+    transform: translateY(-1px);
+  }
+  
+  .image-preview-info {
+    text-align: center;
+    color: #4caf50;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background: #f0fff0;
+    border-radius: 4px;
+    border-left: 3px solid #4caf50;
+  }
+  
+  /* Button and Actions Styling */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  button {
+    font: inherit;
+    padding: 0.75rem 1.5rem;
+    background: #ff5f40;
+    color: white;
+    border: 1px solid #ff5f40;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover,
+  button:active {
+    background: #e74c3c;
+    border-color: #e74c3c;
+  }
+  
+  button:disabled,
+  button:hover:disabled,
+  button:active:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    color: #979797;
+    cursor: not-allowed;
+  }
+  
+  button.inverse {
+    background: transparent;
+    color: #ff5f40;
+  }
+  
+  button.inverse:hover,
+  button.inverse:active {
+    color: white;
+    background: #ff5f40;
+  }
+  
+  /* Error Text Styling */
+  .form-control.--invalid label {
+    color: #ff3b30;
+  }
+  
+  .form-control.--invalid input,
+  .form-control.--invalid textarea {
+    border-color: #ff3b30;
+    background: #fff8f8;
+  }
+  
+  .form-control.--invalid p {
+    color: #ff3b30;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Loading Spinner Overlay Adjustment */
+  .loading-spinner__overlay {
+    border-radius: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .place-form {
+      padding: 1.5rem;
+    }
+    
+    .image-upload__preview {
+      height: 12rem;
+    }
+    
+    .form-actions {
+      flex-direction: column-reverse;
+    }
+    
+    .form-actions button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }

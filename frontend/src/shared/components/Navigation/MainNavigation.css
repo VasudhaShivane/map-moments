@@ -1,0 +1,79 @@
+.main-navigation__menu-btn {
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.main-navigation__menu-btn span {
+  display: block;
+  width: 3rem;
+  height: 2.5px;
+  background: white;
+}
+
+.main-navigation__title {
+  color: white;
+  margin: 0;
+}
+
+.main-navigation__title a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.main-navigation__title span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Logo styling */
+.main-navigation__logo {
+  height: 3.5rem; /* Increased logo size */
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+
+.main-navigation__header-nav {
+  display: none;
+}
+
+.main-navigation__drawer-nav {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-navigation__menu-btn {
+    display: none;
+  }
+
+  .main-navigation__header-nav {
+    display: block;
+  }
+  
+  .main-navigation__logo {
+    height: 3.8rem; /* Even larger on desktop */
+  }
+  
+  .main-navigation__title span {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .main-navigation__logo {
+    height: 2.8rem;
+  }
+  
+  .main-navigation__title span {
+    font-size: 1.3rem;
+  }
+}
