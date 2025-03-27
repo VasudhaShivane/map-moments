@@ -1,6 +1,6 @@
-const multer = require('multer');
+/*const multer = require('multer');*/
 const { v4: uuidv4 } = require('uuid');
-
+/*
 
 const MIME_TYPE_MAP = {
   'image/png': 'png',
@@ -25,5 +25,31 @@ const fileUpload = multer({
     cb(error, isValid);
   }
 });
+
+module.exports = fileUpload;*/
+
+const multer = require('multer');
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const cloudinary = require('cloudinary').v2;
+require('dotenv').config();
+
+// Configure Cloudinary with credentials from .env
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+// Set up Cloudinary storage for Multer
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'mern-uploads',  // Change folder name as needed
+    allowed_formats: ['jpg', 'jpeg', 'png'], 
+  },
+});
+
+// Initialize Multer with Cloudinary storage
+const fileUpload = multer({ storage });
 
 module.exports = fileUpload;
